@@ -1,5 +1,39 @@
+### python-wax - hierarchical configuration format and context object for Python
 
-python-wax - a python configuration format and context object
+### Quick Example
+
+    >>> from wax import Wax, parse_wax
+    >>> w = Wax(server=Wax(host='localhost'))
+    >>> w.server.port = 1234
+    
+    >>> print 'hostname is %(server.host)s using port %(server.port)s' % w
+    hostname is localhost using port 1234
+    
+    >>> s = str(w)
+    >>> print s
+    
+    [server]
+    host = "localhost"
+    port = 1234
+
+    >>> w = parse_wax(s)
+    print w
+    
+    [server]
+    host = "localhost"
+    port = 1234
+    
+
+### Features
+
+ * Context objects can be serialized to / from string
+ * Simple hierarchical key structure
+ * Key order is maintained
+ * Values can be any JSON type
+ * Supports comments and annotations
+
+
+### Overview
 
 Easy to construct in code:
 
