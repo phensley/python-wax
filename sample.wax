@@ -1,0 +1,20 @@
+
+[server]
+address = "0.0.0.0"
+port = 8080
+
+[memcache]
+hosts = ["memcache01", "memcache02"]
+timeout = 1.2
+retries = 3
+
+[logger.console]
+impl = "CONSOLE"
+level = "DEBUG"
+
+[logger.file]
+impl = "FILE"
+level = "ERROR"
+path = "/logs/wax.log"
+
+

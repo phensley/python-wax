@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+
+# demonstration
+
+from wax import *
+
+w1 = parse_wax(open('sample.wax', 'rb').read())
+
+w2 = Wax(w1)
+w2.logger.console += Wax(level='OFF', rotate='weekly')
+
+# show the diff between the two (incomplete)
+print w2 - w1
+
