@@ -1,6 +1,6 @@
 
 from waximpl import Wax, WaxError, parse_wax
-__version__ = '0.1'
+__version__ = '0.2'
 
 
 
