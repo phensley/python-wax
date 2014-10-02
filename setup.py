@@ -2,7 +2,7 @@
 from os.path import abspath, dirname, exists, join
 from setuptools import setup
 
-from wax.version import __version__
+from wax import __version__
 
 reader = lambda n: open(join(dirname(abspath(__file__)), n)).read()
 
