@@ -5,6 +5,7 @@
 from wax import *
 
 w1 = parse_wax(open('sample.wax', 'rb').read())
+print 'the hosts are %r' % w1.memcache.hosts
 
 w2 = Wax(w1)
 w2.logger.console += Wax(level='OFF', rotate='weekly')
