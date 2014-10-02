@@ -2,6 +2,6 @@
 
 CWD=$(cd `dirname $0`; pwd)
 pandoc -f markdown -t rst -o README.txt README.md
-python setup.py register
+python setup.py sdist upload
 rm README.txt
 

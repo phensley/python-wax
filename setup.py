@@ -1,4 +1,5 @@
 
+import sys
 from os.path import abspath, dirname, exists, join
 from setuptools import setup
 
